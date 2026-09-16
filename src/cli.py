@@ -2,6 +2,7 @@
 
 import argparse
 import json
+from pathlib import Path
 import sys
 from typing import List, Optional
 
@@ -131,7 +132,9 @@ def main(args: Optional[List[str]] = None) -> int:
             report_str = json.dumps(report, indent=2, ensure_ascii=False)
 
             if parsed_args.output:
-                with open(parsed_args.output, mode="w", encoding="utf-8") as f:
+                output_path = Path(parsed_args.output)
+                output_path.parent.mkdir(parents=True, exist_ok=True)
+                with open(output_path, mode="w", encoding="utf-8") as f:
                     f.write(report_str)
                 print(f"[SUCCESS] Report saved to '{parsed_args.output}'.")
             else:
