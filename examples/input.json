@@ -1,0 +1,21 @@
+[
+  {
+    "id": "101",
+    "product": "Laptop",
+    "category": "Electronics",
+    "price": "1200.50"
+  },
+  {
+    "id": "102",
+    "product": "Wireless Mouse",
+    "category": "Accessories",
+    "price": "25.00"
+  },
+  {
+    "id": "103",
+    "product": "Teclado Mecánico",
+    "category": "Periféricos",
+    "price": "89.99"
+  }
+]
+
